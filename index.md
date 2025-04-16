@@ -9,3 +9,11 @@ This is the content on my homepage. Let's test the markdown:
 
 Thanks!
 
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a> – {{ post.date | date: "%B %d, %Y" }}
+    </li>
+  {% endfor %}
+</ul>
+
